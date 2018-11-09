@@ -1,31 +1,15 @@
 {
-  "name": "lea-brain",
+  "name": "test-mqtt",
   "version": "1.0.0",
   "description": "orchestator for lea",
   "author": "Lynchmaniac <lynchmaniac@gmail.com> (lynchmaniac.fr)",
   "license": "MIT",
   "dependencies": {
     "mqtt": "^2.18.8",
-    "os": "^0.1.1",
-    "winston": "^3.0.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.18.0",
-    "clean-webpack-plugin": "^0.1.15",
-    "jasmine": "^3.2.0",
-    "jasmine-core": "^3.2.1",
-    "jasmine-spec-reporter": "^4.2.1",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "os": "^0.1.1"
   },
   "scripts": {
-    "test": "webpack --display-error-details && babel-node spec/jasmine-runner",
-    "prod": "webpack --mode=production && node ./dist/app.js",
-    "dev": "webpack --mode=development && node ./dist/app.js",
-    "build": "webpack --display-error-details",
-    "stats": "webpack --env production --profile --json > stats.json"
+    "app": "node src/js/app.js",
+    "send": "node src/js/send.js"
   }
 }
